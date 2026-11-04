@@ -1,0 +1,16 @@
+{
+  "welcome": "欢迎回来，{{name}}",
+  "cards": {
+    "users": "用户总数",
+    "enabledUsers": "启用用户",
+    "roles": "角色数",
+    "requests": "今日请求"
+  },
+  "vsLastPeriod": "较上期",
+  "charts": {
+    "trend": "访问趋势",
+    "distribution": "用户分布",
+    "placeholder": "图表区域（预留）"
+  },
+  "quickActions": "快捷入口"
+}

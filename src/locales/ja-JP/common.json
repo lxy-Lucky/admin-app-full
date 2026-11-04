@@ -1,0 +1,32 @@
+{
+  "hello": "こんにちは",
+  "language": "言語",
+  "theme": {
+    "title": "テーマ",
+    "light": "ライト",
+    "dark": "ダーク",
+    "primaryColor": "テーマカラー",
+    "reset": "リセット"
+  },
+  "actions": {
+    "confirm": "OK",
+    "cancel": "キャンセル",
+    "add": "追加",
+    "edit": "編集",
+    "delete": "削除",
+    "search": "検索",
+    "reset": "リセット"
+  },
+  "placeholder": "ページ準備中",
+  "table": {
+    "total": "全 {{total}} 件"
+  },
+  "confirm": {
+    "title": "実行してもよろしいですか？",
+    "delete": "削除してもよろしいですか？"
+  },
+  "validation": {
+    "required": "必須項目です",
+    "email": "メールアドレスの形式が正しくありません"
+  }
+}

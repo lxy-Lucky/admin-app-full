@@ -1,0 +1,16 @@
+{
+  "network": "Network error. Please check your connection.",
+  "timeout": "Request timed out. Please try again later.",
+  "unauthorized": "Session expired. Please sign in again.",
+  "forbidden": "You do not have permission to access this resource.",
+  "notFound": "The requested resource was not found.",
+  "server": "Server error. Please try again later.",
+  "unknown": "Request failed. Please try again later.",
+  "page": {
+    "403": "Sorry, you are not authorized to access this page.",
+    "404": "Sorry, the page you visited does not exist.",
+    "500": "Sorry, something went wrong."
+  },
+  "backHome": "Back to home",
+  "reload": "Reload"
+}

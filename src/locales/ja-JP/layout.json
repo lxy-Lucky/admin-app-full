@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "dashboard": "ホーム",
+    "system": "システム管理",
+    "users": "ユーザー管理",
+    "roles": "ロール管理"
+  },
+  "header": {
+    "home": "ホーム",
+    "settings": "設定",
+    "logout": "ログアウト",
+    "toggleMenu": "メニューを開閉"
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "menu": {
+    "dashboard": "Home",
+    "system": "System",
+    "users": "Users",
+    "roles": "Roles"
+  },
+  "header": {
+    "home": "Home",
+    "settings": "Settings",
+    "logout": "Sign out",
+    "toggleMenu": "Toggle menu"
+  }
+}

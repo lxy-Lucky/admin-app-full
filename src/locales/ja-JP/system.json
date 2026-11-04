@@ -1,0 +1,26 @@
+{
+  "users": {
+    "username": "ユーザー名",
+    "name": "氏名",
+    "email": "メール",
+    "role": "ロール",
+    "status": "ステータス",
+    "createdAt": "作成日時",
+    "actions": "操作",
+    "search": "ユーザー名 / 氏名 / メールで検索",
+    "add": "ユーザーを追加",
+    "edit": "ユーザーを編集"
+  },
+  "roles": {
+    "code": "ロールコード",
+    "name": "ロール名"
+  },
+  "status": {
+    "enabled": "有効",
+    "disabled": "無効"
+  },
+  "message": {
+    "saved": "保存しました",
+    "deleted": "削除しました"
+  }
+}

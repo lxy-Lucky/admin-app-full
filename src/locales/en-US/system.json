@@ -1,0 +1,26 @@
+{
+  "users": {
+    "username": "Username",
+    "name": "Name",
+    "email": "Email",
+    "role": "Role",
+    "status": "Status",
+    "createdAt": "Created at",
+    "actions": "Actions",
+    "search": "Search username / name / email",
+    "add": "Add user",
+    "edit": "Edit user"
+  },
+  "roles": {
+    "code": "Role code",
+    "name": "Role name"
+  },
+  "status": {
+    "enabled": "Enabled",
+    "disabled": "Disabled"
+  },
+  "message": {
+    "saved": "Saved successfully",
+    "deleted": "Deleted successfully"
+  }
+}

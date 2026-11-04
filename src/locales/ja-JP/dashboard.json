@@ -1,0 +1,16 @@
+{
+  "welcome": "おかえりなさい、{{name}}さん",
+  "cards": {
+    "users": "総ユーザー数",
+    "enabledUsers": "有効ユーザー",
+    "roles": "ロール数",
+    "requests": "本日のリクエスト"
+  },
+  "vsLastPeriod": "前期比",
+  "charts": {
+    "trend": "アクセス推移",
+    "distribution": "ユーザー分布",
+    "placeholder": "グラフ領域（予約）"
+  },
+  "quickActions": "クイックアクセス"
+}

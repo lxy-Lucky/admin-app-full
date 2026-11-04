@@ -1,0 +1,16 @@
+{
+  "welcome": "Welcome back, {{name}}",
+  "cards": {
+    "users": "Total users",
+    "enabledUsers": "Enabled users",
+    "roles": "Roles",
+    "requests": "Requests today"
+  },
+  "vsLastPeriod": "vs last period",
+  "charts": {
+    "trend": "Traffic trend",
+    "distribution": "User distribution",
+    "placeholder": "Chart area (reserved)"
+  },
+  "quickActions": "Quick actions"
+}

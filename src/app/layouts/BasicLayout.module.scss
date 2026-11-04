@@ -1,0 +1,37 @@
+.root {
+  min-height: 100%;
+}
+
+.sider {
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: auto;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: $header-height;
+  overflow: hidden;
+  font-size: 18px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.header {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 0 16px;
+  border-bottom: 1px solid var(--app-color-border);
+}
+
+.actions {
+  margin-left: auto;
+}
+
+.content {
+  margin: 16px;
+}

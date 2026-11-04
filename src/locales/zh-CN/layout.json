@@ -1,0 +1,15 @@
+{
+  "menu": {
+    "dashboard": "首页",
+    "system": "系统管理",
+    "users": "用户管理",
+    "roles": "角色管理",
+    "components": "组件管理"
+  },
+  "header": {
+    "home": "首页",
+    "settings": "设置",
+    "logout": "退出登录",
+    "toggleMenu": "折叠菜单"
+  }
+}
