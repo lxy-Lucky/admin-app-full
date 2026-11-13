@@ -1,0 +1,38 @@
+{
+  "panelTitle": "Pupils, students and classes",
+  "elementary": "Elementary",
+  "juniorHigh": "Junior high",
+  "importData": "Import data",
+  "importHint": "Select the [pupils, students and classes file (xlsm)] for [FY {{year}}].",
+  "importNote": "* Existing data in the file's scope will be deleted.",
+  "notImported": "No data imported yet",
+  "notExecuted": "Not built yet",
+  "schoolNm": "School name",
+  "schoolCode": "School code",
+  "elemStudents": "Pupils grade {{grade}}",
+  "jhsStudents": "Students grade {{grade}}",
+  "classes": "Classes grade {{grade}}",
+  "total": "Total",
+  "specialStudents": "Special-needs pupils",
+  "specialClasses": "Special-needs classes",
+  "lastYearTotal": "Last year total",
+  "thisYearTotal": "This year total",
+  "elem": {
+    "infantChange": "Infant change rates",
+    "infantEnrol": "Infant enrolment rates",
+    "change": "Elementary change rates",
+    "lastYearGrade": "Last year G{{grade}}",
+    "thisYearGrade": "This year G{{grade}}",
+    "printRates": "Print registered rates",
+    "printForecast": "Print forecast",
+    "fileName": {
+      "rates": "Infant_enrolment_change_rates",
+      "forecast": "Forecast_workbook"
+    }
+  },
+  "jhs": {
+    "change": "Junior high change rates",
+    "lastYearGrade": "Last year G{{grade}}",
+    "thisYearGrade": "This year G{{grade}}"
+  }
+}

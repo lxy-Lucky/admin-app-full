@@ -1,0 +1,107 @@
+{
+  "panelTitle": "集計結果詳細",
+  "year": "年度",
+  "execute": "集計実行",
+  "executedAt": "集計実行日",
+  "executedBy": "集計実行者",
+  "registeredAt": "登録日",
+  "registeredBy": "登録者",
+  "updatedAt": "更新日",
+  "updatedBy": "更新者",
+  "print": "印刷",
+  "notExecuted": "集計が実行されていません",
+  "notRegistered": "登録されていません",
+  "done": "完了しました",
+  "nothingToPrint": "出力対象のデータがありません",
+  "ageCount": "{{age}}歳児人数",
+  "fumei": {
+    "personName": "氏名",
+    "age": "年齢",
+    "birthDate": "生年月日",
+    "wardNm": "区名",
+    "azaName": "町字名",
+    "banchigou": "番地号",
+    "katagaki": "方書",
+    "branchNum": "番地枝番",
+    "reason": "学区域不明理由",
+    "fileName": "学区域不明児一覧"
+  },
+  "summary1": {
+    "wardNm": "区名",
+    "machiAzaNm": "町字名",
+    "banchiFrom": "番地コードFROM",
+    "banchiTo": "番地コードTO",
+    "importHint": "【{{year}}年度】の【学区域不明児入力票】を選択してください",
+    "fileName": "1次集計_学区域不明児入力票",
+    "notExecuted": "学区域不明児集計が未実施です。先に、集計処理を行ってください"
+  },
+  "summary2": {
+    "age": "{{age}}歳",
+    "total": "合計",
+    "ukeirekouNm": "受入校名",
+    "noAccept": "（受入なし）",
+    "schoolCode": "学校＃",
+    "anbunRate": "按分率",
+    "shiteikou": "指定校（正規校）",
+    "shiteikouNm": "指定校名",
+    "before": "按分前人数",
+    "ukeirekou1": "受入校①",
+    "anbun1": "受入校①への按分人数",
+    "ukeirekou2": "受入校②",
+    "anbun2": "受入校②への按分人数",
+    "after": "按分後人数（指定校）",
+    "fileName": "2次集計"
+  },
+  "summary3": {
+    "schoolNm": "学校名",
+    "schoolCode": "学校コード",
+    "fileName": "3次集計"
+  },
+  "routine": {
+    "shiteikouNm": "指定校名",
+    "schoolCode": "学校＃",
+    "total": "合計",
+    "ukeirekouNm": "受入校名",
+    "register": "按分登録",
+    "importHint": "【{{year}}年度】の【実績入力表】を選択してください",
+    "importNote": "※「実績入力表」シートは1シートのみとしてください"
+  },
+  "anbun": {
+    "schoolCode": "学校＃",
+    "grade": "{{grade}}年",
+    "total": "合計",
+    "rateThisYear": "当年按分率",
+    "avg3": "3年平均",
+    "fiscalYear": "{{year}}年度",
+    "shiteikou": "指定校",
+    "shiteikouNm": "指定校名",
+    "ukeirekou1": "受入校①",
+    "ukeirekou2": "受入校②",
+    "ukeirekouNm": "受入校名",
+    "rate1": "受入校① 按分率",
+    "rate2": "受入校② 按分率",
+    "register": "按分率登録",
+    "autoResult": "自動集計結果",
+    "registeredRate": "登録済み按分率",
+    "noData": "按分率の集計ができませんでした。学籍DB（小学生）。および、学区域情報の登録を行ってください"
+  },
+  "rates": {
+    "name": {
+      "change": "増減率表",
+      "enrol": "就学率表"
+    },
+    "fileName": {
+      "change": "幼児集計_増減率表",
+      "enrol": "幼児集計_就学率表"
+    },
+    "printChange": "増減率表印刷",
+    "printEnrol": "就学率表印刷",
+    "lastYearAge": "昨年度{{age}}歳児",
+    "lastYearTotal": "昨年度計",
+    "thisYearAge": "今年度{{age}}歳児",
+    "thisYearTotal": "今年度計",
+    "lastYearAge5": "昨年度5歳児",
+    "thisYearGrade1": "今年度小1",
+    "notExecuted": "集計が実行されていません"
+  }
+}

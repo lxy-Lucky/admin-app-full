@@ -1,0 +1,38 @@
+{
+  "panelTitle": "児童生徒学級数結果詳細",
+  "elementary": "小学校",
+  "juniorHigh": "中学校",
+  "importData": "データ取込",
+  "importHint": "【{{year}}年度】の【児童生徒学級数情報ファイル（xlsm）】を選択してください",
+  "importNote": "※ファイル内の取込済みデータは削除されます",
+  "notImported": "データが取り込まれていません",
+  "notExecuted": "集計が実行されていません",
+  "schoolNm": "学校名",
+  "schoolCode": "学校コード",
+  "elemStudents": "児童数{{grade}}年生",
+  "jhsStudents": "生徒数{{grade}}年生",
+  "classes": "学級数{{grade}}年生",
+  "total": "合計",
+  "specialStudents": "特殊児童数",
+  "specialClasses": "特殊学級数",
+  "lastYearTotal": "昨年度計",
+  "thisYearTotal": "今年度計",
+  "elem": {
+    "infantChange": "幼児増減率",
+    "infantEnrol": "幼児就学率",
+    "change": "小学校増減率",
+    "lastYearGrade": "昨年度小{{grade}}",
+    "thisYearGrade": "今年度小{{grade}}",
+    "printRates": "各率登録印刷",
+    "printForecast": "将来推計印刷",
+    "fileName": {
+      "rates": "幼率_就率_転率",
+      "forecast": "幼児_就学_増減率組込ファイル"
+    }
+  },
+  "jhs": {
+    "change": "中学校増減率",
+    "lastYearGrade": "昨年度中{{grade}}",
+    "thisYearGrade": "今年度中{{grade}}"
+  }
+}

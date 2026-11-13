@@ -1,0 +1,107 @@
+{
+  "panelTitle": "集计结果详情",
+  "year": "年度",
+  "execute": "集计执行",
+  "executedAt": "集计执行日",
+  "executedBy": "集计执行者",
+  "registeredAt": "登记日",
+  "registeredBy": "登记者",
+  "updatedAt": "更新日",
+  "updatedBy": "更新者",
+  "print": "打印",
+  "notExecuted": "集计尚未执行",
+  "notRegistered": "尚未登记",
+  "done": "已完成",
+  "nothingToPrint": "没有可输出的数据",
+  "ageCount": "{{age}}岁人数",
+  "fumei": {
+    "personName": "姓名",
+    "age": "年龄",
+    "birthDate": "出生日期",
+    "wardNm": "区名",
+    "azaName": "町字名",
+    "banchigou": "番地号",
+    "katagaki": "方书",
+    "branchNum": "番地枝番",
+    "reason": "学区不明原因",
+    "fileName": "学区不明儿童一览"
+  },
+  "summary1": {
+    "wardNm": "区名",
+    "machiAzaNm": "町字名",
+    "banchiFrom": "番地代码FROM",
+    "banchiTo": "番地代码TO",
+    "importHint": "请选择【{{year}}年度】的【学区不明儿童录入表】",
+    "fileName": "1次集计_学区不明儿童",
+    "notExecuted": "尚未导入录入表。请先执行学区不明儿童集计，再导入录入表"
+  },
+  "summary2": {
+    "age": "{{age}}岁",
+    "total": "合计",
+    "ukeirekouNm": "接收校名",
+    "noAccept": "（无接收）",
+    "schoolCode": "学校＃",
+    "anbunRate": "分配率",
+    "shiteikou": "指定校（正规校）",
+    "shiteikouNm": "指定校名",
+    "before": "分配前人数",
+    "ukeirekou1": "接收校①",
+    "anbun1": "向接收校①的分配人数",
+    "ukeirekou2": "接收校②",
+    "anbun2": "向接收校②的分配人数",
+    "after": "分配后人数（指定校）",
+    "fileName": "2次集计"
+  },
+  "summary3": {
+    "schoolNm": "学校名",
+    "schoolCode": "学校代码",
+    "fileName": "3次集计"
+  },
+  "routine": {
+    "shiteikouNm": "指定校名",
+    "schoolCode": "学校＃",
+    "total": "合计",
+    "ukeirekouNm": "接收校名",
+    "register": "分配登记",
+    "importHint": "请选择【{{year}}年度】的【实绩录入表】",
+    "importNote": "※「实绩录入表」工作表只能有一个"
+  },
+  "anbun": {
+    "schoolCode": "学校＃",
+    "grade": "{{grade}}年",
+    "total": "合计",
+    "rateThisYear": "当年分配率",
+    "avg3": "3年平均",
+    "fiscalYear": "{{year}}年度",
+    "shiteikou": "指定校",
+    "shiteikouNm": "指定校名",
+    "ukeirekou1": "接收校①",
+    "ukeirekou2": "接收校②",
+    "ukeirekouNm": "接收校名",
+    "rate1": "接收校① 分配率",
+    "rate2": "接收校② 分配率",
+    "register": "分配率登记",
+    "autoResult": "自动统计结果",
+    "registeredRate": "已登记分配率",
+    "noData": "无法统计分配率。请先登记学籍DB（小学生）和学区信息"
+  },
+  "rates": {
+    "name": {
+      "change": "增减率表",
+      "enrol": "就学率表"
+    },
+    "fileName": {
+      "change": "幼儿统计_增减率表",
+      "enrol": "幼儿统计_就学率表"
+    },
+    "printChange": "增减率表打印",
+    "printEnrol": "就学率表打印",
+    "lastYearAge": "去年{{age}}岁儿童",
+    "lastYearTotal": "去年合计",
+    "thisYearAge": "今年{{age}}岁儿童",
+    "thisYearTotal": "今年合计",
+    "lastYearAge5": "去年5岁儿童",
+    "thisYearGrade1": "今年小一",
+    "notExecuted": "集计尚未执行。请先登记学籍DB（小学生）后执行集计"
+  }
+}

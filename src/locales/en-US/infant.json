@@ -1,0 +1,107 @@
+{
+  "panelTitle": "Summary details",
+  "year": "Fiscal year",
+  "execute": "Run summary",
+  "executedAt": "Run at",
+  "executedBy": "Run by",
+  "registeredAt": "Registered at",
+  "registeredBy": "Registered by",
+  "updatedAt": "Updated at",
+  "updatedBy": "Updated by",
+  "print": "Print",
+  "notExecuted": "The summary has not been run yet",
+  "notRegistered": "Nothing registered yet",
+  "done": "Done",
+  "nothingToPrint": "There is no data to export",
+  "ageCount": "Age {{age}} count",
+  "fumei": {
+    "personName": "Name",
+    "age": "Age",
+    "birthDate": "Date of birth",
+    "wardNm": "Ward",
+    "azaName": "Town / area",
+    "banchigou": "Lot number",
+    "katagaki": "Building",
+    "branchNum": "Branch number",
+    "reason": "Reason unknown",
+    "fileName": "Unknown-area children"
+  },
+  "summary1": {
+    "wardNm": "Ward",
+    "machiAzaNm": "Town / area",
+    "banchiFrom": "Lot code FROM",
+    "banchiTo": "Lot code TO",
+    "importHint": "Select the [Unknown-area children input sheet] for [FY {{year}}].",
+    "fileName": "Summary1_unknown_area",
+    "notExecuted": "Nothing imported yet. Run the unknown-area children summary first, then import the input sheet."
+  },
+  "summary2": {
+    "age": "Age {{age}}",
+    "total": "Total",
+    "ukeirekouNm": "Receiving school",
+    "noAccept": "(none)",
+    "schoolCode": "School #",
+    "anbunRate": "Allocation rate",
+    "shiteikou": "Designated school",
+    "shiteikouNm": "School name",
+    "before": "Before allocation",
+    "ukeirekou1": "Receiving school 1",
+    "anbun1": "Allocated to school 1",
+    "ukeirekou2": "Receiving school 2",
+    "anbun2": "Allocated to school 2",
+    "after": "After allocation",
+    "fileName": "Summary2"
+  },
+  "summary3": {
+    "schoolNm": "School name",
+    "schoolCode": "School code",
+    "fileName": "Summary3"
+  },
+  "routine": {
+    "shiteikouNm": "Designated school",
+    "schoolCode": "School #",
+    "total": "Total",
+    "ukeirekouNm": "Receiving school",
+    "register": "Register allocation",
+    "importHint": "Select the [Results input sheet] for [FY {{year}}].",
+    "importNote": "* The results input sheet must be a single sheet."
+  },
+  "anbun": {
+    "schoolCode": "School #",
+    "grade": "Grade {{grade}}",
+    "total": "Total",
+    "rateThisYear": "This year",
+    "avg3": "3-year avg",
+    "fiscalYear": "FY {{year}}",
+    "shiteikou": "Designated school",
+    "shiteikouNm": "School name",
+    "ukeirekou1": "Receiving school 1",
+    "ukeirekou2": "Receiving school 2",
+    "ukeirekouNm": "School name",
+    "rate1": "School 1 rates",
+    "rate2": "School 2 rates",
+    "register": "Register rates",
+    "autoResult": "Automatic result",
+    "registeredRate": "Registered rates",
+    "noData": "Rates cannot be computed. Register the student record DB (elementary) and the school area info first."
+  },
+  "rates": {
+    "name": {
+      "change": "Change-rate table",
+      "enrol": "Enrolment-rate table"
+    },
+    "fileName": {
+      "change": "Infant_change_rates",
+      "enrol": "Infant_enrolment_rates"
+    },
+    "printChange": "Print change rates",
+    "printEnrol": "Print enrolment rates",
+    "lastYearAge": "Last year, age {{age}}",
+    "lastYearTotal": "Last year total",
+    "thisYearAge": "This year, age {{age}}",
+    "thisYearTotal": "This year total",
+    "lastYearAge5": "Last year, age 5",
+    "thisYearGrade1": "This year grade 1",
+    "notExecuted": "Not run yet. Register the student record DB (elementary), then run the summary."
+  }
+}

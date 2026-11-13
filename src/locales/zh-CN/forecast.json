@@ -1,0 +1,38 @@
+{
+  "panelTitle": "儿童学生班级数结果详情",
+  "elementary": "小学",
+  "juniorHigh": "初中",
+  "importData": "导入数据",
+  "importHint": "请选择【{{year}}年度】的【儿童学生班级数信息文件（xlsm）】",
+  "importNote": "※文件内已导入的数据将被删除",
+  "notImported": "尚未导入数据",
+  "notExecuted": "尚未集计",
+  "schoolNm": "学校名",
+  "schoolCode": "学校代码",
+  "elemStudents": "儿童数{{grade}}年级",
+  "jhsStudents": "学生数{{grade}}年级",
+  "classes": "班级数{{grade}}年级",
+  "total": "合计",
+  "specialStudents": "特殊儿童数",
+  "specialClasses": "特殊班级数",
+  "lastYearTotal": "去年合计",
+  "thisYearTotal": "今年合计",
+  "elem": {
+    "infantChange": "幼儿增减率",
+    "infantEnrol": "幼儿就学率",
+    "change": "小学增减率",
+    "lastYearGrade": "去年小{{grade}}",
+    "thisYearGrade": "今年小{{grade}}",
+    "printRates": "各率登记打印",
+    "printForecast": "将来推算打印",
+    "fileName": {
+      "rates": "幼率_就率_转率",
+      "forecast": "幼儿_就学_增减率组合文件"
+    }
+  },
+  "jhs": {
+    "change": "初中增减率",
+    "lastYearGrade": "去年初{{grade}}",
+    "thisYearGrade": "今年初{{grade}}"
+  }
+}
