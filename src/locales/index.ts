@@ -7,7 +7,13 @@ import { useLocaleStore } from './store'
 export * from './config'
 export { useLocaleStore } from './store'
 
-// ./<lng>/<ns>.json -> resources[lng][ns]; add a language or namespace by adding files.
+/**
+ * 国际化初始化入口
+ *
+ * 统一管理语言资源加载、i18next 初始化和语言切换，
+ * 并同步 Day.js、HTML lang 属性及持久化语言状态。
+ */
+// 根据 ./<lng>/<ns>.json 自动加载语言资源，新增语言或命名空间时添加对应 JSON 文件即可。
 const modules = import.meta.glob<Record<string, unknown>>('./*/*.json', {
   eager: true,
   import: 'default',
@@ -32,7 +38,18 @@ void i18n.use(initReactI18next).init({
   lng: initial,
   fallbackLng: DEFAULT_LANGUAGE,
   supportedLngs: LANGUAGES.map((l) => l.value),
-  ns: ['common', 'error', 'layout', 'auth', 'system', 'dashboard'],
+  ns: [
+    'common',
+    'error',
+    'layout',
+    'auth',
+    'system',
+    'dashboard',
+    'components',
+    'master',
+    'infant',
+    'forecast',
+  ],
   defaultNS: 'common',
   interpolation: { escapeValue: false },
   react: { useSuspense: false },
@@ -40,7 +57,11 @@ void i18n.use(initReactI18next).init({
 })
 applySideEffects(initial)
 
-/** Single entry point for switching language: i18next + dayjs + <html lang> + persisted store. */
+/**
+ * 统一的语言切换入口
+ *
+ * 同步更新 i18next、Day.js、HTML lang 属性和 Zustand 语言状态。
+ */
 export async function changeLanguage(language: Language) {
   await i18n.changeLanguage(language)
   applySideEffects(language)

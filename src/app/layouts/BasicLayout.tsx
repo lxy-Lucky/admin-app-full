@@ -1,65 +1,49 @@
-import { MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons'
-import { Button, Layout, theme } from 'antd'
 import { useTranslation } from 'react-i18next'
-import { Outlet, useMatches } from 'react-router'
+import { Link, Outlet, useMatches } from 'react-router'
 import { hasPermission, useAuthStore } from '@/features/auth'
 import { ForbiddenPage } from '@/features/error'
 import { env } from '@/shared/config/env'
 import type { RouteHandle } from '@/shared/types/route'
-import { useThemeStore } from '@/theme'
 import styles from './BasicLayout.module.scss'
 import HeaderActions from './HeaderActions'
-import LayoutBreadcrumb from './LayoutBreadcrumb'
 import SideMenu from './SideMenu'
-import { useLayoutStore } from './store'
+import SubHeader from './SubHeader'
 
-const SIDER_WIDTH = 220
-
+/**
+ * 基础布局
+ *
+ * 包含顶部导航、侧边菜单、子页面导航和主内容区域。
+ * 统一处理路由权限校验，无权限时展示 403 页面。
+ */
 export default function BasicLayout() {
   const { t } = useTranslation('layout')
-  const { token } = theme.useToken()
-  const mode = useThemeStore((s) => s.mode)
-  const { collapsed, toggle } = useLayoutStore()
   const permissions = useAuthStore((s) => s.permissions)
   const matches = useMatches()
 
-  // Route permission (inherited from parents) is enforced here, in one place.
+  // 统一校验当前匹配路由及其父级路由的权限
   const forbidden = matches.some(
     (m) => !hasPermission(permissions, (m.handle as RouteHandle | undefined)?.permission),
   )
 
   return (
-    <Layout className={styles.root}>
-      <Layout.Sider
-        theme={mode}
-        width={SIDER_WIDTH}
-        collapsed={collapsed}
-        trigger={null}
-        collapsible
-        className={styles.sider}
-      >
-        <div className={styles.logo}>
-          {collapsed ? env.VITE_APP_TITLE.slice(0, 1) : env.VITE_APP_TITLE}
+    <div className={styles.root}>
+      <header className={styles.header}>
+        <Link to="/" className={styles.title} aria-label={t('header.home')}>
+          {env.VITE_APP_TITLE}
+        </Link>
+        <HeaderActions />
+      </header>
+      <div className={styles.body}>
+        <div className={styles.nav}>
+          <SideMenu />
         </div>
-        <SideMenu />
-      </Layout.Sider>
-      <Layout>
-        <Layout.Header className={styles.header} style={{ background: token.colorBgContainer }}>
-          <Button
-            type="text"
-            aria-label={t('header.toggleMenu')}
-            icon={collapsed ? <MenuUnfoldOutlined /> : <MenuFoldOutlined />}
-            onClick={toggle}
-          />
-          <LayoutBreadcrumb />
-          <div className={styles.actions}>
-            <HeaderActions />
-          </div>
-        </Layout.Header>
-        <Layout.Content className={styles.content}>
-          {forbidden ? <ForbiddenPage fullPage={false} /> : <Outlet />}
-        </Layout.Content>
-      </Layout>
-    </Layout>
+        <div className={styles.right}>
+          <SubHeader />
+          <main className={styles.content}>
+            {forbidden ? <ForbiddenPage fullPage={false} /> : <Outlet />}
+          </main>
+        </div>
+      </div>
+    </div>
   )
 }

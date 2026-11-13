@@ -3,12 +3,37 @@
     "dashboard": "ホーム",
     "system": "システム管理",
     "users": "ユーザー管理",
-    "roles": "ロール管理"
+    "roles": "ロール管理",
+    "components": "コンポーネント",
+    "demoForm": "フォーム",
+    "demoTable": "テーブル",
+    "demoInputs": "入力と選択",
+    "demoFeedback": "フィードバック",
+    "demoButtons": "ボタンと権限",
+    "master": "マスタ管理",
+    "jukiDb": "住民基本台帳DB登録",
+    "schoolAreaInfo": "学区域情報登録",
+    "gakusekiDb": "学籍DB登録",
+    "schoolMaster": "学校マスタ登録",
+    "infant": "幼児数集計",
+    "fumeiArea": "学区域不明児抽出",
+    "summary1": "1次集計：学区域不明児入力票取込",
+    "anbunToroku": "2次集計：特調校按分登録",
+    "summary2": "2次集計実行",
+    "routineAnbun": "3次集計：常態化指定地区外の按分登録",
+    "summary3": "3次集計実行",
+    "summaryRates": "増減率表・就学率表",
+    "elem": "小学校推計",
+    "studentClass": "児童生徒学級数",
+    "elemChangeRates": "採用率修正",
+    "jhs": "中学校推計",
+    "jhsChangeRates": "採用率修正"
   },
   "header": {
     "home": "ホーム",
     "settings": "設定",
     "logout": "ログアウト",
-    "toggleMenu": "メニューを開閉"
+    "toggleMenu": "メニューを開閉",
+    "back": "戻る"
   }
 }

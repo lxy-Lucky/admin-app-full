@@ -2,7 +2,12 @@ import { theme } from 'antd'
 import { useEffect } from 'react'
 import { useThemeStore } from './store'
 
-/** Mirrors AntD tokens to CSS variables so Sass / CSS Modules follow the active theme. */
+/**
+ * 主题 CSS 变量同步
+ *
+ * 将 Ant Design 主题 Token 同步到全局 CSS 自定义属性，
+ * 供 Sass / CSS Modules 使用，并同步页面的主题模式。
+ */
 export default function CssVarsSync() {
   const { token } = theme.useToken()
   const mode = useThemeStore((s) => s.mode)

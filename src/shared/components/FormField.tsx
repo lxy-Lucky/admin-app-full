@@ -11,17 +11,27 @@ import { useTranslation } from 'react-i18next'
 import { translateError } from '@/shared/utils/form'
 
 interface FormFieldProps<T extends FieldValues, N extends FieldPath<T>> {
+  /** React Hook Form 表单控制对象。 */
   control: Control<T>
+  /** 当前字段在表单数据中的路径，支持嵌套字段。 */
   name: N
+  /** 表单项标签。 */
   label?: ReactNode
-  /** Only draws the asterisk; validation lives in the Zod schema. */
+  /** 是否显示必填标记，实际校验规则由 Zod Schema 定义。 */
   required?: boolean
+  /** 表单项下方的补充说明。 */
   extra?: ReactNode
-  /** Render the AntD control: `{(field) => <Input {...field} />}` */
+  /** 自定义渲染输入控件，并接收 React Hook Form 提供的字段属性。 */
   children: (field: ControllerRenderProps<T, N>) => ReactElement
 }
 
-/** RHF Controller + AntD Form.Item: label wiring, error status and translated Zod messages. */
+/**
+ * 通用表单字段组件。
+ *
+ * 通过 React Hook Form Controller 接管字段状态，
+ * 使用 Ant Design Form.Item 统一管理标签、必填标记和错误展示，
+ * 并将 Zod 校验错误转换为国际化提示。
+ */
 export default function FormField<T extends FieldValues, N extends FieldPath<T> = FieldPath<T>>({
   control,
   name,

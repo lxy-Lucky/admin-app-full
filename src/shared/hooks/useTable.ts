@@ -5,7 +5,12 @@ import type { PageResult } from '@/shared/types/api'
 
 export type SortOrder = 'asc' | 'desc'
 
-/** What the fetcher receives: your filters plus paging and server-side sorting. */
+/**
+ * 表格请求参数
+ *
+ * 在业务筛选条件基础上，统一附加分页和服务端排序参数。
+ * 作为 fetcher 的入参。
+ */
 export type TableQuery<F extends object> = F & {
   page: number
   pageSize: number
@@ -14,14 +19,19 @@ export type TableQuery<F extends object> = F & {
 }
 
 interface UseTableOptions<T, F extends object> {
-  /** Base key (e.g. userKeys.lists()); invalidating it refreshes every page/filter combo. */
+  /** 基础 Query Key，失效时可刷新该表格下所有分页和筛选组合。 */
   queryKey: readonly unknown[]
   fetcher: (query: TableQuery<F>) => Promise<PageResult<T>>
   defaultFilters?: F
   defaultPageSize?: number
 }
 
-/** Server-driven table state (paging, filters, sorting) on top of TanStack Query. */
+/**
+ * 服务端表格状态管理 Hook
+ *
+ * 基于 TanStack Query 统一管理分页、筛选、排序和数据请求，
+ * 支持保留上一页数据，减少分页切换时的界面闪烁。
+ */
 export function useTable<T, F extends object = Record<never, never>>({
   queryKey,
   fetcher,
@@ -45,7 +55,7 @@ export function useTable<T, F extends object = Record<never, never>>({
     queryKey: [...queryKey, query],
     queryFn: async () => {
       const data = await fetcher(query)
-      // Deleting the last row of the last page leaves it empty: step back to the new last page.
+      // 删除最后一页的最后一条数据后，当前页可能超出总页数，需要回退到新的最后一页。
       if (data.list.length === 0 && data.total > 0 && query.page > 1) {
         setPage(Math.max(1, Math.ceil(data.total / query.pageSize)))
       }
@@ -66,7 +76,7 @@ export function useTable<T, F extends object = Record<never, never>>({
   }
 
   return {
-    /** Spread into <DataTable /> / antd Table. */
+    /** 可直接展开传入 DataTable / Ant Design Table 的属性。 */
     tableProps: {
       dataSource: result.data?.list,
       loading: result.isFetching,
@@ -74,7 +84,7 @@ export function useTable<T, F extends object = Record<never, never>>({
       onChange,
     } satisfies Pick<TableProps<T>, 'dataSource' | 'loading' | 'pagination' | 'onChange'>,
     filters,
-    /** Merge filter values and go back to page 1. */
+    /** 合并筛选条件，并重置到第一页。 */
     setFilters: (patch: Partial<F>) => {
       setFilters((prev) => ({ ...prev, ...patch }))
       setPage(1)

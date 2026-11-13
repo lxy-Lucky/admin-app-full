@@ -15,7 +15,8 @@
     "edit": "編集",
     "delete": "削除",
     "search": "検索",
-    "reset": "リセット"
+    "reset": "リセット",
+    "execute": "実行"
   },
   "placeholder": "ページ準備中",
   "table": {
@@ -23,10 +24,45 @@
   },
   "confirm": {
     "title": "実行してもよろしいですか？",
-    "delete": "削除してもよろしいですか？"
+    "delete": "削除してもよろしいですか？",
+    "save": "入力した内容で保存しますか？"
   },
   "validation": {
     "required": "必須項目です",
     "email": "メールアドレスの形式が正しくありません"
+  },
+  "upload": {
+    "select": "ファイルを選択",
+    "required": "ファイルを選択してください",
+    "tooLarge": "ファイルサイズは100MBを超えられません"
+  },
+  "search": {
+    "condition": "検索条件"
+  },
+  "rate": {
+    "wardCode": "区コード",
+    "schoolCode": "学校コード",
+    "schoolNm": "学校名",
+    "rateTitle": "R{{n}}率",
+    "avg3": "3平均",
+    "avg5": "5平均",
+    "other": "その他率",
+    "lastYearRate": "前年採用率",
+    "note": "備考"
+  },
+  "rateTable": {
+    "panelTitle": "集計結果詳細",
+    "year": "年度",
+    "execute": "集計実行",
+    "executedAt": "集計実行日",
+    "executedBy": "集計実行者",
+    "updatedAt": "更新日",
+    "updatedBy": "更新者",
+    "save": "修正登録",
+    "saved": "登録しました",
+    "done": "完了しました",
+    "nothingToPrint": "出力対象のデータがありません",
+    "overwrite": "既に{{name}}は集計実行済みです。再実行すると、修正登録した採用率・その他率・備考を含め、既存のデータが上書きされます。",
+    "otherRequired": "その他を選択した場合は、その他率を入力してください（学校名：{{school}}）"
   }
 }

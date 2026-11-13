@@ -4,12 +4,36 @@
     "system": "系统管理",
     "users": "用户管理",
     "roles": "角色管理",
-    "components": "组件管理"
+    "components": "组件展示",
+    "demoForm": "表单",
+    "demoTable": "表格",
+    "demoInputs": "输入与选择",
+    "demoFeedback": "反馈",
+    "demoButtons": "按钮与权限",
+    "master": "主数据管理",
+    "jukiDb": "居民基本台账DB登记",
+    "schoolAreaInfo": "学区信息登记",
+    "gakusekiDb": "学籍DB登记",
+    "schoolMaster": "学校主数据登记",
+    "infant": "幼儿数统计",
+    "fumeiArea": "学区不明儿童提取",
+    "summary1": "一次统计：学区不明儿童录入表导入",
+    "anbunToroku": "二次统计：特调校分配登记",
+    "summary2": "执行二次统计",
+    "routineAnbun": "三次统计：常态化指定区外分配登记",
+    "summary3": "执行三次统计",
+    "summaryRates": "增减率表・就学率表",
+    "elem": "小学推算",
+    "studentClass": "学生班级数",
+    "elemChangeRates": "采用率修正",
+    "jhs": "初中推算",
+    "jhsChangeRates": "采用率修正"
   },
   "header": {
     "home": "首页",
     "settings": "设置",
     "logout": "退出登录",
-    "toggleMenu": "折叠菜单"
+    "toggleMenu": "折叠菜单",
+    "back": "返回"
   }
 }

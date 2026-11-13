@@ -1,6 +1,6 @@
 # Admin App
 
-React 19 + TypeScript + Vite 企业级后台前端基础模板：布局、登录与权限、路由守卫、统一请求与错误处理、国际化、主题、通用表格/表单、Mock、Dashboard，以及代码规范与测试环境。
+React 1登录9 + TypeScript + Vite 企业级后台前端基础模板：布局、与权限、路由守卫、统一请求与错误处理、国际化、主题、通用表格/表单、Mock、Dashboard，以及代码规范与测试环境。
 
 ## 技术栈
 

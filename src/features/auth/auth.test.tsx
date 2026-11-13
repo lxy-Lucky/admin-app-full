@@ -46,7 +46,10 @@ beforeEach(() => {
 describe('login', () => {
   it('validates required fields with Zod messages', async () => {
     renderAt('/login')
-    await userEvent.click(await screen.findByRole('button', { name: /登\s*录/ }))
+    // The mock accounts are prefilled; empty them to hit validation.
+    await userEvent.clear(await screen.findByPlaceholderText('请输入用户名'))
+    await userEvent.clear(screen.getByPlaceholderText('请输入密码'))
+    await userEvent.click(screen.getByRole('button', { name: /登\s*录/ }))
     expect(await screen.findAllByText('此项必填')).toHaveLength(2)
   })
 

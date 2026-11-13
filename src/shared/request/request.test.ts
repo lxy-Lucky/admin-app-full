@@ -42,6 +42,20 @@ describe('request', () => {
     expect(hooks.notifyError).not.toHaveBeenCalled()
   })
 
+  it('rejects an HTML page returned in place of JSON as a network error', async () => {
+    axiosInstance.defaults.adapter = async (config) => ({
+      data: '<!doctype html><html></html>',
+      status: 200,
+      statusText: 'OK',
+      headers: { 'content-type': 'text/html' },
+      config,
+    })
+    const err = await http.get('/x').catch((e: unknown) => e)
+    expect(err).toBeInstanceOf(ApiError)
+    expect((err as ApiError).kind).toBe('network')
+    expect(hooks.notifyError).toHaveBeenCalledOnce()
+  })
+
   it('injects token and Accept-Language', async () => {
     hooks.getToken.mockReturnValue('abc')
     let seen: AxiosRequestConfig | undefined

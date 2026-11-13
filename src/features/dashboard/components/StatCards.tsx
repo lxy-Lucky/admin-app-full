@@ -27,7 +27,7 @@ export default function StatCards() {
   return (
     <Row gutter={[16, 16]}>
       {CARD_KEYS.map((key) => {
-        const card = overview.data?.cards.find((c) => c.key === key)
+        const card = overview.data?.cards?.find((c) => c.key === key)
         return (
           <Col key={key} xs={24} sm={12} xl={6}>
             <Card>

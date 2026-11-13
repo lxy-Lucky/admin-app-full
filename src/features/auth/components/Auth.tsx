@@ -2,18 +2,29 @@ import type { ReactNode } from 'react'
 import { useAuth } from '../hooks'
 
 interface AuthProps {
-  /** Required permission code. */
+  /** 必须拥有的权限码。 */
   code?: string
-  /** Allowed when the user has at least one of these codes. */
+  /** 满足其中任意一个权限码即可通过。 */
   anyOf?: readonly string[]
-  /** Allowed only when the user has all of these codes. */
+  /** 必须同时拥有所有指定权限码。 */
   allOf?: readonly string[]
-  /** Rendered when access is denied (default: nothing). */
+  /** 权限不足时展示的内容，默认为不渲染。 */
   fallback?: ReactNode
+  /** 权限验证通过后展示的内容。 */
   children: ReactNode
 }
 
-/** Operation-level permission: <Auth code="system:user:edit"><Button>Edit</Button></Auth> */
+/**
+ * 操作级权限控制组件。
+ *
+ * 根据当前用户的权限决定是否渲染子组件，
+ * 支持单个权限、任意权限和全部权限组合校验。
+ *
+ * 示例：
+ * <Auth code="system:user:edit">
+ *   <Button>编辑</Button>
+ * </Auth>
+ */
 export default function Auth({ code, anyOf, allOf, fallback = null, children }: AuthProps) {
   const { can, canAny, canAll } = useAuth()
   const allowed = can(code) && (!anyOf || canAny(anyOf)) && (!allOf || canAll(allOf))

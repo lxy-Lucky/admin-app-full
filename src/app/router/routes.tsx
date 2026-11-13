@@ -8,6 +8,11 @@ import { AuthGuard, GuestGuard } from './guards'
 import { menuRoutes } from './menu-routes'
 import type { AppRoute } from './types'
 
+/**
+ * 将业务路由配置转换为 React Router 路由对象。
+ *
+ * 递归处理子路由，并将页面懒加载函数转换为 React Router 的 lazy 格式。
+ */
 function toRouteObject(route: AppRoute): RouteObject {
   const handle: RouteHandle = { titleKey: route.titleKey, permission: route.permission }
   if (route.children) {
@@ -21,6 +26,11 @@ function toRouteObject(route: AppRoute): RouteObject {
   } as RouteObject
 }
 
+/**
+ * 应用路由配置
+ *
+ * 统一管理登录认证、基础布局、业务路由和异常页面。
+ */
 export const appRoutes: RouteObject[] = [
   {
     errorElement: <ServerErrorPage />,

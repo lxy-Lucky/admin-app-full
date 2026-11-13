@@ -3,12 +3,37 @@
     "dashboard": "Home",
     "system": "System",
     "users": "Users",
-    "roles": "Roles"
+    "roles": "Roles",
+    "components": "Components",
+    "demoForm": "Form",
+    "demoTable": "Table",
+    "demoInputs": "Inputs",
+    "demoFeedback": "Feedback",
+    "demoButtons": "Buttons & Auth",
+    "master": "Master Data",
+    "jukiDb": "Resident Registry DB",
+    "schoolAreaInfo": "School Area Info",
+    "gakusekiDb": "Student Record DB",
+    "schoolMaster": "School Master",
+    "infant": "Infant Count Summary",
+    "fumeiArea": "Unknown-Area Children Extraction",
+    "summary1": "Summary 1: Import Unknown-Area Input Sheets",
+    "anbunToroku": "Summary 2: Special School Allocation",
+    "summary2": "Run Summary 2",
+    "routineAnbun": "Summary 3: Out-of-District Allocation",
+    "summary3": "Run Summary 3",
+    "summaryRates": "Change & Enrolment Rate Tables",
+    "elem": "Elementary Forecast",
+    "studentClass": "Pupils & Classes",
+    "elemChangeRates": "Adopted Rate Adjustment",
+    "jhs": "Junior High Forecast",
+    "jhsChangeRates": "Adopted Rate Adjustment"
   },
   "header": {
     "home": "Home",
     "settings": "Settings",
     "logout": "Sign out",
-    "toggleMenu": "Toggle menu"
+    "toggleMenu": "Toggle menu",
+    "back": "Back"
   }
 }

@@ -4,6 +4,11 @@ import { useTranslation } from 'react-i18next'
 import { Link, useMatches } from 'react-router'
 import type { RouteHandle } from '@/shared/types/route'
 
+/**
+ * 面包屑导航
+ *
+ * 根据当前匹配的路由配置生成面包屑导航，并支持国际化。
+ */
 export default function LayoutBreadcrumb() {
   const { t } = useTranslation('layout')
   const matches = useMatches()

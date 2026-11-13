@@ -74,6 +74,7 @@ export default function UsersPage() {
   return (
     <Card>
       <DataTable<User>
+        fillHeight
         rowKey="id"
         columns={columns}
         {...table.tableProps}

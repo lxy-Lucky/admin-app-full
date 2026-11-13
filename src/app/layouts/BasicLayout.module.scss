@@ -1,37 +1,74 @@
 .root {
+  display: flex;
+  flex-direction: column;
   min-height: 100%;
 }
 
-.sider {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  overflow: auto;
-}
-
-.logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: $header-height;
-  overflow: hidden;
-  font-size: 18px;
-  font-weight: 600;
-  white-space: nowrap;
-}
-
+/* Top bar */
 .header {
   display: flex;
-  gap: 12px;
+  flex-shrink: 0;
   align-items: center;
-  padding: 0 16px;
+  justify-content: space-between;
+  height: $header-height;
+  padding: 0 24px;
+  font-weight: 700;
+  color: #fff;
+  background: var(--app-color-primary);
+}
+
+.title {
+  padding: 0;
+  font-size: 20px;
+  font-weight: 600;
+  color: inherit;
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+/* Body: dark left menu + right frame */
+.body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+
+/* Above sticky table headers (z-index grows with column count); below modals (1000). */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 900;
+  flex-shrink: 0;
+  align-self: flex-start;
+  width: 15%;
+  min-width: $nav-min-width;
+  height: calc(100vh - #{$header-height});
+  overflow-y: auto;
+  background: $nav-bg;
+}
+
+.right {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  background: var(--app-color-bg-layout);
+}
+
+/* Back link + breadcrumb */
+.subHeader {
+  display: flex;
+  flex-shrink: 0;
+  gap: 16px;
+  align-items: center;
+  height: $subheader-height;
+  padding: 0 20px;
+  background: var(--app-color-bg-container);
   border-bottom: 1px solid var(--app-color-border);
 }
 
-.actions {
-  margin-left: auto;
-}
-
 .content {
+  flex: 1;
   margin: 16px;
 }

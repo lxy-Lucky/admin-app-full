@@ -15,7 +15,8 @@
     "edit": "Edit",
     "delete": "Delete",
     "search": "Search",
-    "reset": "Reset"
+    "reset": "Reset",
+    "execute": "Run"
   },
   "placeholder": "Under construction",
   "table": {
@@ -23,10 +24,45 @@
   },
   "confirm": {
     "title": "Are you sure?",
-    "delete": "Are you sure you want to delete this?"
+    "delete": "Are you sure you want to delete this?",
+    "save": "Save what you entered?"
   },
   "validation": {
     "required": "This field is required",
     "email": "Invalid email address"
+  },
+  "upload": {
+    "select": "Select file",
+    "required": "Please select a file",
+    "tooLarge": "File size must not exceed 100MB"
+  },
+  "search": {
+    "condition": "Search conditions"
+  },
+  "rate": {
+    "wardCode": "Ward code",
+    "schoolCode": "School code",
+    "schoolNm": "School name",
+    "rateTitle": "R{{n}}",
+    "avg3": "3-yr avg",
+    "avg5": "5-yr avg",
+    "other": "Other rate",
+    "lastYearRate": "Last year's adopted",
+    "note": "Note"
+  },
+  "rateTable": {
+    "panelTitle": "Details",
+    "year": "Fiscal year",
+    "execute": "Run summary",
+    "executedAt": "Run at",
+    "executedBy": "Run by",
+    "updatedAt": "Updated at",
+    "updatedBy": "Updated by",
+    "save": "Save changes",
+    "saved": "Saved",
+    "done": "Done",
+    "nothingToPrint": "There is no data to export",
+    "overwrite": "{{name}} has already been run. Running it again overwrites the existing data, including the adopted rates, other rates and notes you saved.",
+    "otherRequired": "Enter the other rate when Other is chosen (school: {{school}})"
   }
 }

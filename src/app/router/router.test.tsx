@@ -43,7 +43,8 @@ describe('router', () => {
   it('redirects / to /dashboard with layout, menu and breadcrumb', async () => {
     signIn(['*'])
     const router = renderAt('/')
-    expect(await screen.findByRole('menuitem', { name: /首页/ })).toBeInTheDocument()
+    expect(await screen.findByRole('menuitem', { name: /系统管理/ })).toBeInTheDocument()
+    expect(screen.queryByRole('menuitem', { name: /首页/ })).not.toBeInTheDocument()
     await waitFor(() => expect(router.state.location.pathname).toBe('/dashboard'))
     await waitFor(() => expect(screen.getByRole('navigation')).toHaveTextContent('首页'))
     expect(screen.getByText('Tester')).toBeInTheDocument()
@@ -53,14 +54,16 @@ describe('router', () => {
     signIn(['system:role:view'])
     renderAt('/system/users')
     expect(await screen.findByText('抱歉，您没有权限访问该页面')).toBeInTheDocument()
-    expect(screen.getByRole('menuitem', { name: '角色管理' })).toBeInTheDocument()
+    // Children live in a hover flyout.
+    await userEvent.hover(screen.getByRole('menuitem', { name: /系统管理/ }))
+    expect(await screen.findByRole('menuitem', { name: '角色管理' })).toBeInTheDocument()
     expect(screen.queryByRole('menuitem', { name: '用户管理' })).not.toBeInTheDocument()
   })
 
   it('hides a parent menu when no child is accessible', async () => {
     signIn([])
     renderAt('/dashboard')
-    await screen.findByRole('menuitem', { name: /首页/ })
+    await screen.findByRole('menuitem', { name: /组件展示/ })
     expect(screen.queryByRole('menuitem', { name: '系统管理' })).not.toBeInTheDocument()
   })
 

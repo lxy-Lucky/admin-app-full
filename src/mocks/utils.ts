@@ -45,6 +45,20 @@ export function authorize(request: Request, permission?: string): Auth {
   return { ok: true, username }
 }
 
+/** Sorts a copy by `field` (numbers numerically, everything else as text; arrays joined). */
+export function sortRows<T extends object>(rows: T[], field: string | null, desc: boolean): T[] {
+  if (!field || !rows[0] || !(field in rows[0])) return rows
+  const value = (row: T) => (row as Record<string, unknown>)[field]
+  return [...rows].sort((a, b) => {
+    const [x, y] = [value(a), value(b)]
+    const cmp =
+      typeof x === 'number' && typeof y === 'number'
+        ? x - y
+        : String(x).localeCompare(String(y), undefined, { numeric: true })
+    return desc ? -cmp : cmp
+  })
+}
+
 export function paginate<T>(items: T[], page: number, pageSize: number): PageResult<T> {
   const start = (page - 1) * pageSize
   return { list: items.slice(start, start + pageSize), total: items.length, page, pageSize }
