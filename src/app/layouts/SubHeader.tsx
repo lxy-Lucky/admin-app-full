@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from 'react-router'
 import styles from './BasicLayout.module.scss'
 import LayoutBreadcrumb from './LayoutBreadcrumb'
 
-const HOME_PATH = '/dashboard'
+const HOME_PATH = '/home'
 
 /**
  * 子导航栏

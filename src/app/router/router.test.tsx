@@ -40,12 +40,12 @@ describe('router', () => {
     expect(router.state.location.state).toEqual({ from: '/system/roles' })
   })
 
-  it('redirects / to /dashboard with layout, menu and breadcrumb', async () => {
+  it('redirects / to /home with layout, menu and breadcrumb', async () => {
     signIn(['*'])
     const router = renderAt('/')
     expect(await screen.findByRole('menuitem', { name: /系统管理/ })).toBeInTheDocument()
     expect(screen.queryByRole('menuitem', { name: /首页/ })).not.toBeInTheDocument()
-    await waitFor(() => expect(router.state.location.pathname).toBe('/dashboard'))
+    await waitFor(() => expect(router.state.location.pathname).toBe('/home'))
     await waitFor(() => expect(screen.getByRole('navigation')).toHaveTextContent('首页'))
     expect(screen.getByText('Tester')).toBeInTheDocument()
   })
@@ -62,7 +62,7 @@ describe('router', () => {
 
   it('hides a parent menu when no child is accessible', async () => {
     signIn([])
-    renderAt('/dashboard')
+    renderAt('/home')
     await screen.findByRole('menuitem', { name: /组件展示/ })
     expect(screen.queryByRole('menuitem', { name: '系统管理' })).not.toBeInTheDocument()
   })
@@ -81,7 +81,7 @@ describe('router', () => {
 
   it('logs out back to /login', async () => {
     signIn(['*'])
-    const router = renderAt('/dashboard')
+    const router = renderAt('/home')
     await userEvent.click(await screen.findByText('Tester'))
     await userEvent.click(await screen.findByText('退出登录'))
     await screen.findByRole('button', { name: /登\s*录/ })

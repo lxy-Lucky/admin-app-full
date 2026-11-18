@@ -24,8 +24,7 @@
   },
   "confirm": {
     "title": "确定要执行此操作吗？",
-    "delete": "确定要删除吗？",
-    "save": "确定保存输入的内容吗？"
+    "delete": "确定要删除吗？"
   },
   "validation": {
     "required": "此项必填",
@@ -39,30 +38,7 @@
   "search": {
     "condition": "查询条件"
   },
-  "rate": {
-    "wardCode": "区代码",
-    "schoolCode": "学校代码",
-    "schoolNm": "学校名",
-    "rateTitle": "R{{n}}率",
-    "avg3": "3平均",
-    "avg5": "5平均",
-    "other": "其他率",
-    "lastYearRate": "去年采用率",
-    "note": "备注"
-  },
-  "rateTable": {
-    "panelTitle": "集计结果详情",
-    "year": "年度",
-    "execute": "集计执行",
-    "executedAt": "集计执行日",
-    "executedBy": "集计执行者",
-    "updatedAt": "更新日",
-    "updatedBy": "更新者",
-    "save": "修改登记",
-    "saved": "已保存",
-    "done": "已完成",
-    "nothingToPrint": "没有可输出的数据",
-    "overwrite": "{{name}}已执行过集计。再次执行将覆盖已有数据，包括修改登记的采用率、其他率和备注。",
-    "otherRequired": "选择「其他」时请输入其他率（学校名：{{school}}）"
+  "home": {
+    "welcome": "欢迎使用后台管理系统"
   }
 }

@@ -1,7 +1,5 @@
 import dayjs from 'dayjs'
 import type { Role, User } from '@/features/system/types'
-import { resetForecastDb } from './forecast-db'
-import { resetInfantDb } from './infant-db'
 import { resetMasterDb } from './master-db'
 
 export const roles: Role[] = [
@@ -43,6 +41,4 @@ export function resetDb() {
   db.users = seedUsers()
   db.nextUserId = 58
   resetMasterDb()
-  resetInfantDb()
-  resetForecastDb()
 }

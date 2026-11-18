@@ -2,7 +2,7 @@ import { buildMenuItems, findSelectedKey, getOpenKeys } from './menu'
 import type { AppRoute } from './types'
 
 const routes: AppRoute[] = [
-  { path: 'dashboard', titleKey: 'menu.dashboard' },
+  { path: 'home', titleKey: 'menu.home' },
   {
     path: 'system',
     titleKey: 'menu.system',
@@ -17,10 +17,10 @@ const t = (k: string) => k
 describe('menu', () => {
   it('filters by permission and drops empty parents', () => {
     const all = buildMenuItems(routes, t, () => true)
-    expect(all.map((i) => i?.key)).toEqual(['/dashboard', '/system'])
+    expect(all.map((i) => i?.key)).toEqual(['/home', '/system'])
 
     const none = buildMenuItems(routes, t, (p) => !p)
-    expect(none.map((i) => i?.key)).toEqual(['/dashboard'])
+    expect(none.map((i) => i?.key)).toEqual(['/home'])
   })
 
   it('hides hideInMenu routes', () => {
@@ -34,6 +34,6 @@ describe('menu', () => {
     expect(findSelectedKey(items, '/system/users/42')).toBe('/system/users')
     expect(findSelectedKey(items, '/nope')).toBeUndefined()
     expect(getOpenKeys('/system/users')).toEqual(['/system'])
-    expect(getOpenKeys('/dashboard')).toEqual([])
+    expect(getOpenKeys('/home')).toEqual([])
   })
 })

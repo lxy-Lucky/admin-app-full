@@ -56,7 +56,7 @@ export const appRoutes: RouteObject[] = [
           </AuthGuard>
         ),
         children: [
-          { index: true, element: <Navigate to="/dashboard" replace /> },
+          { index: true, element: <Navigate to="/home" replace /> },
           ...menuRoutes.map(toRouteObject),
         ],
       },

@@ -110,11 +110,9 @@ describe('mock users', () => {
 })
 
 describe('mock misc', () => {
-  it('serves roles, dashboard overview and debug statuses', async () => {
+  it('serves roles and debug statuses', async () => {
     await signIn('admin', 'admin123')
     expect(await http.get<unknown[]>('/system/roles')).toHaveLength(3)
-    const overview = await http.get<{ cards: unknown[] }>('/dashboard/overview')
-    expect(overview.cards).toHaveLength(4)
     expect(await rejection(http.get('/mock/status/500'))).toMatchObject({
       kind: 'http',
       status: 500,

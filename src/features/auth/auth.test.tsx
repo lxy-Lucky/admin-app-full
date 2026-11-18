@@ -91,7 +91,7 @@ describe('session', () => {
   it('drops the session on 401 and sends the user to /login with the current page', async () => {
     useAuthStore.getState().setSession({ token: 'old', user: { name: 'Bob' }, permissions: ['*'] })
     mockApi(() => ({ code: 401, data: null, msg: '' }))
-    const router = renderAt('/dashboard')
+    const router = renderAt('/home')
     await screen.findByText('Bob')
 
     await act(async () => {
@@ -99,7 +99,7 @@ describe('session', () => {
     })
 
     await waitFor(() => expect(router.state.location.pathname).toBe('/login'))
-    expect(router.state.location.state).toEqual({ from: '/dashboard' })
+    expect(router.state.location.state).toEqual({ from: '/home' })
     expect(useAuthStore.getState().token).toBeNull()
   })
 })
