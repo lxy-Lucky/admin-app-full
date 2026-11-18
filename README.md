@@ -1,6 +1,6 @@
 # Admin App
 
-React 19 + TypeScript + Vite 企业级后台前端基础模板：布局、与权限、路由守卫、统一请求与错误处理、国际化、主题、通用表格/表单、Mock、Dashboard，以及代码规范与测试环境。
+React 19 + TypeScript + Vite 前端基础模板：布局、与权限、路由守卫、统一请求与错误处理、国际化、主题、通用表格/表单、Mock，以及代码规范与测试环境。
 
 ## 技术栈
 
@@ -113,4 +113,3 @@ src/
 - AntD 会在两个汉字的按钮文字间自动加空格（如“删 除”），测试里按钮名用 `/删\s*除/` 匹配；如需关闭，在 `ConfigProvider` 设置 `button={{ autoInsertSpace: false }}`。
 - Token 存放在 localStorage（Zustand persist）；若后端支持，建议改为 httpOnly cookie。
 - 表单弹窗只在打开时挂载，每次打开都是干净的表单状态。
-- Dashboard 的图表区是预留占位，不需要时删除 `DashboardPage.tsx` 中标注的区块即可。
